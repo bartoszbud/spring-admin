@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>pl.lab</groupId>
 	<artifactId>spring-admin</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>spring-admin</name>
 	<description>Spring Admin UI</description>
 	<properties>
