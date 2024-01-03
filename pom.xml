@@ -87,7 +87,7 @@
 						</tags>
 						<auth>
 							<username>podman</username>
-							<password>podman</password>
+							<password>podman123</password>
 						</auth>
 					</to>
 					<container>
