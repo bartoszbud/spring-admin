@@ -3,7 +3,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://spring-registry/eureka/
+      defaultZone: http://spring-registry-service/eureka/
     registerWithEureka: true
   instance:
     preferIpAddress: true
