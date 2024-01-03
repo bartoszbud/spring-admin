@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>pl.lab</groupId>
 	<artifactId>spring-admin</artifactId>
-	<version>1.2-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>spring-admin</name>
 	<description>Spring Admin UI</description>
 	<properties>
@@ -81,13 +81,13 @@
 				<configuration>
 					<containerizingMode>packaged</containerizingMode>
 					<to>
-						<image>bartoszbud/${project.artifactId}:${project.version}</image>
+						<image>nexus-int.lab.pl/${project.artifactId}:${project.version}</image>
 						<tags>
 							<tag>${project.version}</tag>
 						</tags>
 						<auth>
-							<username>***</username>
-							<password>***</password>
+							<username>podman</username>
+							<password>podman</password>
 						</auth>
 					</to>
 					<container>
@@ -95,7 +95,7 @@
 						<labels>
 							<mvn.build.version>${project.artifactId}-${project.version}</mvn.build.version>
 						</labels>
-						<entrypoint>java,-Xms256m,-Xmx256m,-jar,/app/${project.build.finalName}.jar</entrypoint>
+						<entrypoint>java,-Xms256m,-Xmx256m,-Dspring.profiles.active=dev,-jar,/app/${project.build.finalName}.jar</entrypoint>
 					</container>
 					<extraDirectories>
 						<paths>
