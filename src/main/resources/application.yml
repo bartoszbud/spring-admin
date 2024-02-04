@@ -1,7 +1,12 @@
 spring:
   application:
     name: spring-admin
-
+  cloud:
+    config:
+      enabled: false
+info:
+  app:
+    name: ${spring.application.name}
 server:
   port: 8762
 
