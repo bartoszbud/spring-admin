@@ -4,11 +4,17 @@ spring:
   cloud:
     config:
       enabled: false
+server:
+  port: 8762
 info:
   app:
     name: ${spring.application.name}
-server:
-  port: 8762
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://spring-registry-service/eureka/
+  instance:
+    preferIpAddress: true
 management:
   endpoints:
     web:
